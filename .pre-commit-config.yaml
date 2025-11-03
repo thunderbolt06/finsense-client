@@ -1,0 +1,21 @@
+repos:
+  - repo: https://github.com/realm/SwiftLint
+    rev: 0.59.1
+    hooks:
+      - id: swiftlint
+        name: SwiftLint
+        entry: swiftlint
+        language: system
+        types: [swift]
+        args: [--config, .swiftlint.yml]
+        files: ^(apps/desktop/observer-lib/|apps/GoldFinch/)
+  - repo: https://github.com/nicklockwood/SwiftFormat
+    rev: 0.55.5
+    hooks:
+      - id: swiftformat
+        name: SwiftFormat
+        entry: swiftformat
+        language: system
+        types: [swift]
+        args: [apps/desktop/observer-lib, apps/GoldFinch]
+        files: ^(apps/desktop/observer-lib/|apps/GoldFinch/)
