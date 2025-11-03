@@ -35,7 +35,7 @@ export function Message({ message }: MessageProps) {
       >
         {/* Thoughts - shown before content for assistant messages */}
         {showThought && (
-          <Thought thought={message.thought!} id={message.id} createdAt={message.timestamp} />
+          <Thought thought={message.thought!} createdAt={message.timestamp} />
         )}
 
         {/* Web Search Modality - shown before content for assistant messages */}

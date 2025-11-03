@@ -7,7 +7,7 @@
 export const API_CONFIG = {
   // Backend server base URL
   // Change this to point to your backend server
-  BASE_URL: import.meta.env.VITE_API_BASE_URL || 'http://localhost:8000',
+  BASE_URL: import.meta.env.VITE_API_BASE_URL || 'http://203.192.253.34:8000',
   
   // API endpoints
   get QUERY_URL() {
