@@ -3,14 +3,13 @@ import ReactMarkdown from 'react-markdown';
 
 interface ThoughtProps {
   thought: string;
-  id: string;
   createdAt?: Date;
 }
 
-export function Thought({ thought, id, createdAt }: ThoughtProps) {
+export function Thought({ thought, createdAt }: ThoughtProps) {
   const [isExpanded, setIsExpanded] = useState(false);
   const [renderMarkdown, setRenderMarkdown] = useState(false);
-  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const isNew = createdAt 
     ? Date.now() - createdAt.getTime() < 2500

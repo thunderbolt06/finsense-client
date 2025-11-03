@@ -14,9 +14,6 @@ export function WebSearchModality({ queries, createdAt }: WebSearchModalityProps
 
   if (!queries || queries.length === 0) return null;
 
-  const firstQuery = queries[0];
-  const otherQueries = queries.slice(1);
-
   return (
     <div className="gap-2 mb-2">
       {/* Modality Header - Clickable */}
