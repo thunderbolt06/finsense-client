@@ -1,0 +1,81 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+.direnv
+
+.env.staging
+.env.production
+.env.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Rust background compiler loc list
+.bacon-locations
+
+# Local development conveniences
+observer-lib/Sources/observer/cli/ignoredToken.swift
+observer-lib/Sources/observer/lib/ignoredContext.swift
+
+# Sentry Config File
+.env.sentry-build-plugin
+
+# Goldfinch project
+# Ignore user-specific Xcode workspace data
+*.xcuserdatad/
+*.xcuserdata/
+*.xcuserstate
+
+# Ignore build artifacts
+Goldfinch/build/*
+
+node_modules/.cache/
+
+# android
+.gradle
+.cursor
+**/.claude/settings.local.json
+
+# Ignore vendor docs
+vendor/docs
+dist-electron
+release
+
+.turbo
+.tanstack
+coverage
+/apps/desktop/build-resources/observer-cli
+/apps/desktop/build-resources/bin/*
+/apps/desktop/observer-lib/.build/
+/apps/desktop/observer-lib/.build/**
+/apps/desktop/observer-lib/.cache/
+
+.expo
+
+**/build/
+**/.build/
+**/dist/
+**/out/
+**/dist-*/
+**/out-*/
+
+/apps/mobile/ios
+/apps/mobile/android
+.yarn/install-state.gz

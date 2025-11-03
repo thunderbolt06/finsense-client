@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+  background-color: #000000; /* black */
+}
+
+#root {
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Remove all blue colors from browser defaults */
+button {
+  color: inherit; /* Prevent blue text on buttons */
+  background-color: transparent;
+}
+
+button:focus {
+  outline: none;
+}
+
+button:active {
+  color: inherit;
+}
+
+/* Remove blue text selection */
+::selection {
+  background-color: #4a4a4a; /* Grey instead of blue */
+  color: white;
+}
+
+::-moz-selection {
+  background-color: #4a4a4a; /* Firefox */
+  color: white;
+}
+
+/* Ensure no blue links */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:visited {
+  color: inherit;
+}
+
+a:hover {
+  color: inherit;
+}
+
+/* Remove any focus outlines that might be blue */
+*:focus {
+  outline: none;
+}
+
+/* Ensure text in all elements uses the specified colors */
+* {
+  color: inherit;
+}
+
+/* Shimmer animation for new thoughts and modalities */
+@keyframes thoughtsShimmer {
+  0% {
+    opacity: 0;
+    background-position: 0% 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    background-position: -170% 0;
+  }
+}
+
+.shimmer-text {
+  background: linear-gradient(
+    to right,
+    rgb(237, 233, 222) 0%,
+    rgb(237, 233, 222) 67.5%,
+    rgb(255, 255, 255) 72.5%,
+    rgb(255, 255, 255) 87.5%,
+    rgb(237, 233, 222) 92.5%,
+    rgb(237, 233, 222) 100%
+  );
+  background-size: 200% 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-position: 0% 0;
+  animation: thoughtsShimmer 1.7s cubic-bezier(0.6, 0.6, 0, 1) forwards;
+}

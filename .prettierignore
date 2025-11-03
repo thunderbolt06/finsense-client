@@ -1,0 +1,8 @@
+dist
+build
+node_modules
+src-tauri
+src/routeTree.gen.ts
+/apps/desktop/observer-lib/*
+/apps/NativeChat/*
+/apps/GoldFinch/*
